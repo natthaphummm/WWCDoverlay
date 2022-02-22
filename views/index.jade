@@ -1,0 +1,48 @@
+extends layout
+
+block content
+
+  .container
+
+    //- Modal
+    #winnerModal.modal.fade(tabindex='-1', aria-labelledby='winnerModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h5#winnerModalLabel.modal-title Modal title
+            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+
+          .modal-body
+            .input-group.mb-3
+              span#inputGroup-sizing-default.input-group-text Image Link
+              input#imageLink.form-control(type='text', aria-label='Sizing example input', aria-describedby='inputGroup-sizing-default')
+
+
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close   
+            button#winnerModalSave.btn.btn-primary(type='button', data-bs-dismiss='modal') Save changes
+
+    //- var map = ['erangel','erangel','erangel','miramar','miramar']
+
+    .centered.w-75.row
+      .macth.col.position-relative(data-id=1, data-map='erangel',data-bs-toggle="modal",data-bs-target="#winnerModal")
+          img.img-fluid.rounded(src=`/images/erangel.png`)
+          .position-absolute.top-50.start-50.translate-middle: img#winnerMap1.img-thumbnail.bg-transparent.border-0(src='')
+      
+      .macth.col.position-relative(data-id=2, data-map='erangel',data-bs-toggle="modal",data-bs-target="#winnerModal")
+          img.img-fluid.rounded(src=`/images/erangel.png`)
+          .position-absolute.top-50.start-50.translate-middle: img#winnerMap2.img-thumbnail.bg-transparent.border-0(src='')
+      
+      .macth.col.position-relative(data-id=3, data-map='erangel',data-bs-toggle="modal",data-bs-target="#winnerModal")
+          img.img-fluid.rounded(src=`/images/erangel.png`)
+          .position-absolute.top-50.start-50.translate-middle: img#winnerMap3.img-thumbnail.bg-transparent.border-0(src='')
+
+      .macth.col.position-relative(data-id=4, data-map='miramar',data-bs-toggle="modal",data-bs-target="#winnerModal")
+          img.img-fluid.rounded(src=`/images/miramar.png`)
+          .position-absolute.top-50.start-50.translate-middle: img#winnerMap4.img-thumbnail.bg-transparent.border-0(src='')
+      
+      .macth.col.position-relative(data-id=5, data-map='miramar',data-bs-toggle="modal",data-bs-target="#winnerModal")
+          img.img-fluid.rounded(src=`/images/miramar.png`)
+          .position-absolute.top-50.start-50.translate-middle: img#winnerMap5.img-thumbnail.bg-transparent.border-0(src='')
+
+
